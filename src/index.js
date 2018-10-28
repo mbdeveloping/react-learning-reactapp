@@ -4,23 +4,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const title = React.createElement(
-    'h1',
-    {id: 'main-title', title: 'This is a title.'},
-    'My first React element!'
-  );
+const desc = 'I jus learned how to create a react node and render into the DOM.';
+const myTitleId = 'min-title';
+const name = 'Mantvydas';
 
-  const desc = React.createElement(
-      'p',
-      null,
-      'I jus learned how to create a react node and render into the DOM.'
-  );
-
-  const header = React.createElement(
-      'header',
-      null,
-      title,
-      desc
+  const header = (
+      <header>
+      {/* Comment in JSX */}
+          <h1 id={myTitleId}>{name} First React Element!</h1>
+          <p className="main-desc">{desc}</p>
+      </header>
   );
 
 ReactDOM.render(
