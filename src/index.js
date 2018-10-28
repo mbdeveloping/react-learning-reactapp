@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const Header = () => {
     return (
         <header>
             <h1>Scoreboard</h1>
-            <span className="stats">Players: 1</span>
+            <span className="stats">Player: 1</span>
         </header>
     );    
 }
@@ -20,17 +19,33 @@ const Player = () => {
                 Mantvydas
             </span>
 
-            <div className="counter">
-                <button className="counter-action decrement">-</button>
-                <span className="counter-score">35</span>
-                <button className="counter-action increment">+</button>
-            </div>
+            <Counter />
+        </div>
+    );
+}
+
+const Counter = () => {
+    return (
+        <div className="counter">
+            <button className="counter-action decrement">-</button>
+            <span className="counter-score">35</span>
+            <button className="counter-action increment">+</button>
+         </div>
+    );
+}
+
+const App = () => {
+    return (
+        <div className="scoreboard">
+            <Header />
+            {/* Players List */}
+            <Player />
         </div>
     );
 }
 
 ReactDOM.render(
-    <Player />, 
+    <App />, 
     document.getElementById('root')
 );
 

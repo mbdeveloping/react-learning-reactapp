@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #efefef;
 }
 
 code {
@@ -41,9 +45,28 @@ code {
   cursor: pointer;
 }
 .counter-action:hover {
-  background: lightgrey;
+  background: grey;
+  color: #fff;
 }
 
 .counter-score {
   padding: 0 1em;
 }
+
+.scoreboard {
+  width: 60%;
+  margin: 100px auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: grey;
+  color: #fff;
+}
+
+header h1 {
+  padding: 0 5em;
+}
+
