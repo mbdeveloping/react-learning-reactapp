@@ -6,19 +6,23 @@ import * as serviceWorker from './serviceWorker';
 const players = [
     {
         name: "Mantvydas",
-        score: 80
+        score: 80,
+        id: 1
     },
     {
         name: "Vaiva",
-        score: 75
+        score: 75,
+        id: 2
     },
     {
         name: "Sandra",
-        score: 70
+        score: 70,
+        id: 3
     },
     {
         name: "Ranjan",
-        score: 65
+        score: 65,
+        id: 4
     }
 ]
 
@@ -37,19 +41,30 @@ const Player = (props) => {
         <div className="player">
             <span className="player-name">{props.name}</span>
 
-            <Counter score={props.score} />
+            <Counter />
         </div>
     );
 }
 
-const Counter = (props) => {
-    return (
-        <div className="counter">
-            <button className="counter-action decrement">-</button>
-            <span className="counter-score">{props.score}</span>
-            <button className="counter-action increment">+</button>
-         </div>
-    );
+class Counter extends React.Component {
+
+    state = {
+        score: 0
+    };
+
+    incrementScore() {
+        console.log('Working')
+    }
+
+    render() {
+        return (
+            <div className="counter">
+                <button className="counter-action decrement">-</button>
+                <span className="counter-score">{this.state.score}</span>
+                <button className="counter-action increment" onClick={this.incrementScore}>+</button>
+             </div>
+        );
+    }
 }
 
 const App = (props) => {
@@ -64,6 +79,7 @@ const App = (props) => {
                 <Player 
                     name={player.name} 
                     score={player.score} 
+                    key={player.id.toString()}
                  />
             )}
         </div>

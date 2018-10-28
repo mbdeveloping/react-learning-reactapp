@@ -45,8 +45,12 @@ code {
   color: grey;
   cursor: pointer;
 }
-.counter-action:hover {
-  background: grey;
+.increment:hover {
+  background: green;
+  color: #fff;
+}
+.decrement:hover {
+  background: red;
   color: #fff;
 }
 .counter-action:focus {
