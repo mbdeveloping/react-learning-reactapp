@@ -27,10 +27,6 @@ code {
   background: #fff;
 }
 
-.player-name {
-  padding: 0 1em;
-}
-
 .counter {
   height: 100%;
   display: flex;
@@ -39,7 +35,7 @@ code {
 
 .counter-action {
   height: 100%;
-  width: 45px;
+  width: 60px;
   border: none;
   font-size: 2em;
   color: grey;
@@ -58,7 +54,8 @@ code {
 }
 
 .counter-score {
-  padding: 0 1em;
+  width: 70px;
+  text-align: center;
 }
 
 .scoreboard {
@@ -78,5 +75,24 @@ header {
 
 header h1 {
   padding: 0 5em;
+}
+
+.remove-player {
+  font-size: 1em;
+  background: none;
+  margin-right: 1em;
+  border: none;
+  cursor: pointer;
+  color: lightgrey;
+  padding: 1em 1.5em;
+  font-weight: 1000;
+}
+
+.remove-player:hover {
+  color: red;
+}
+
+.remove-player:focus {
+  outline: none;
 }
 
