@@ -1,1 +1,1 @@
-Learning React
+Learning React by creating scoreboard app
