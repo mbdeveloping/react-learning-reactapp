@@ -46,7 +46,7 @@ code {
   cursor: pointer;
 }
 .increment:hover {
-  background: green;
+  background: lightgreen;
   color: #fff;
 }
 .decrement:hover {
