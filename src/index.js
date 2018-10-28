@@ -4,20 +4,33 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const desc = 'I jus learned how to create a react node and render into the DOM.';
-const myTitleId = 'min-title';
-const name = 'Mantvydas';
+const Header = () => {
+    return (
+        <header>
+            <h1>Scoreboard</h1>
+            <span className="stats">Players: 1</span>
+        </header>
+    );    
+}
 
-  const header = (
-      <header>
-      {/* Comment in JSX */}
-          <h1 id={myTitleId}>{name} First React Element!</h1>
-          <p className="main-desc">{desc}</p>
-      </header>
-  );
+const Player = () => {
+    return (
+        <div className="player">
+            <span className="player-name">
+                Mantvydas
+            </span>
+
+            <div className="counter">
+                <button className="counter-action decrement">-</button>
+                <span className="counter-score">35</span>
+                <button className="counter-action increment">+</button>
+            </div>
+        </div>
+    );
+}
 
 ReactDOM.render(
-    header, 
+    <Player />, 
     document.getElementById('root')
 );
 

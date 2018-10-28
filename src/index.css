@@ -12,3 +12,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.player {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid grey;
+  height: 60px;
+}
+
+.player-name {
+  padding: 0 1em;
+}
+
+.counter {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.counter-action {
+  height: 100%;
+  width: 45px;
+  border: none;
+  font-size: 2em;
+  color: grey;
+  cursor: pointer;
+}
+.counter-action:hover {
+  background: lightgrey;
+}
+
+.counter-score {
+  padding: 0 1em;
+}
