@@ -3,49 +3,75 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-const Header = () => {
+const players = [
+    {
+        name: "Mantvydas",
+        score: 80
+    },
+    {
+        name: "Vaiva",
+        score: 75
+    },
+    {
+        name: "Sandra",
+        score: 70
+    },
+    {
+        name: "Ranjan",
+        score: 65
+    }
+]
+
+const Header = (props) => {
+    console.log(props)
     return (
         <header>
-            <h1>Scoreboard</h1>
-            <span className="stats">Player: 1</span>
+            <h1>{props.title}</h1>
+            <span className="stats">Players: {props.totalPlayers}</span>
         </header>
     );    
 }
 
-const Player = () => {
+const Player = (props) => {
     return (
         <div className="player">
-            <span className="player-name">
-                Mantvydas
-            </span>
+            <span className="player-name">{props.name}</span>
 
-            <Counter />
+            <Counter score={props.score} />
         </div>
     );
 }
 
-const Counter = () => {
+const Counter = (props) => {
     return (
         <div className="counter">
             <button className="counter-action decrement">-</button>
-            <span className="counter-score">35</span>
+            <span className="counter-score">{props.score}</span>
             <button className="counter-action increment">+</button>
          </div>
     );
 }
 
-const App = () => {
+const App = (props) => {
     return (
         <div className="scoreboard">
-            <Header />
+            <Header 
+                title="Scoreboard" 
+                totalPlayers={props.initialPlayers.length}
+            />
             {/* Players List */}
-            <Player />
+            {props.initialPlayers.map(player => 
+                <Player 
+                    name={player.name} 
+                    score={player.score} 
+                 />
+            )}
         </div>
     );
 }
 
 ReactDOM.render(
-    <App />, 
+    <App initialPlayers={players} />, 
     document.getElementById('root')
 );
 

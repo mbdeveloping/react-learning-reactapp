@@ -22,8 +22,9 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid grey;
+  border-bottom: 1px solid lightgrey;
   height: 60px;
+  background: #fff;
 }
 
 .player-name {
@@ -48,6 +49,9 @@ code {
   background: grey;
   color: #fff;
 }
+.counter-action:focus {
+  outline: none;
+}
 
 .counter-score {
   padding: 0 1em;
@@ -56,6 +60,8 @@ code {
 .scoreboard {
   width: 60%;
   margin: 100px auto;
+
+  border-bottom: 2px solid grey;
 }
 
 header {
